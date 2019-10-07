@@ -27,7 +27,14 @@ body {
 body {
   font-family: 'Source Sans Pro', sans-serif;
   /* padding set the same as the height of navbar */
-  padding-top: 120px; 
+  padding-top: 120px;
+}
+
+main {
+  background-color: #f4f1ec;
+  margin: auto;
+  width: 90%;
+
 }
 
 
