@@ -30,7 +30,7 @@ article.tweets header {
 }
 
 .handle {
-  opacity: 0.5;
+  opacity: 0;
 }
 
 article > section {
@@ -54,6 +54,14 @@ footer > div {
   flex-direction: row;
   width: 60px;
   justify-content: space-between;
+}
+
+article:hover {
+  box-shadow: 5px 5px 5px magenta;
+}
+
+article:hover .handle {
+  opacity: 0.5;
 }
 
 
