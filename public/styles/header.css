@@ -9,6 +9,7 @@ header {
   justify-content: center;
   height: 400px;
   width: 100%;
+  color: #FFFFFF;
   background-color: #7a82a1;
   background-image: url(../images/asfalt-light.png)
 }
