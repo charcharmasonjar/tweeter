@@ -1,0 +1,33 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+textarea {
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid #555149;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+}
+
+input[type=submit] {
+  background: #4056A1;
+  color: #FFFFFF;
+  font-family: 'Bungee', cursive;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+  color: #555149;
+}
+
+.new-tweet > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0 0 0;
+}
+
