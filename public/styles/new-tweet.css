@@ -1,16 +1,15 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
-  
 }
 
 textarea {
-  background: transparent;
-  border: 0;
-  border-bottom: 3px solid #555149;
   height: 40px;
   line-height: 40px;
   margin-top: 20px;
+  border: 0;
+  border-bottom: 3px solid #555149;
+  background: transparent;
 }
 
 input[type=submit] {
