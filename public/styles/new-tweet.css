@@ -24,6 +24,10 @@ input[type=submit] {
   color: #555149;
 }
 
+.counter.tooManyCharacters {
+  color: red;
+}
+
 .new-tweet > div {
   display: flex;
   flex-direction: row;
