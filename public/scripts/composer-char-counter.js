@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("textarea[name='text']").keyup(function(e) {
+  $("textarea[name='text']").on('input', (function(e) {
     const counter = $(this).parent().children().children('.counter');
 
     $(counter).html(() => {
@@ -11,5 +11,5 @@ $(document).ready(function() {
     } else {
       $(counter).removeClass("tooManyCharacters");
     }
-  });
+  }));
 });
