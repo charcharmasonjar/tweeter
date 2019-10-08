@@ -42,14 +42,16 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <section class="new-tweet">
-            <h2>Compose Tweet</h2>
-            <form action="/tweets/" method="POST">
+      <!-- <h2>Compose Tweet</h2> -->
+      <form action="/tweets/" method="POST">
+            <section class="new-tweet">
               <textarea name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
-              <span class="counter">140</span>
+              <div>
+                <input type="submit" value="Tweet">
+                <span class="counter">140</span>
+              </div>
+            </section>
             </form>
-          </section>
     </main>
 
   </body>
