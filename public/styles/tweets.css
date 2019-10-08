@@ -4,11 +4,7 @@ article {
   align-items: center;
   border: 3px solid #555149;
   margin-top: 15px;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%
+  margin-bottom: 20px;
 }
 
 article.tweets header {
@@ -20,6 +16,8 @@ article.tweets header {
   align-items: center;
 }
 
+
+
 .user {
   height: 100%;
   display: flex;
@@ -30,8 +28,6 @@ article.tweets header {
 article > section {
   width: 95%;
 }
-
-
 
 article.tweets footer {
   display: flex;
