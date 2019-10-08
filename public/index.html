@@ -1,59 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-  </head>
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-  <body>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
+    rel="stylesheet">
 
-    <header>
+</head>
+
+<body>
+
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span>tweeter</span>
+  </nav>
+
+  <header>
+    <div>
+      <img src="/images/profile-hex.png" alt="user avatar">
+    </div>
+    <div>
+      <h2>char char</h2>
+    </div>
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <form action="/tweets/" method="POST">
+      <section class="new-tweet">
+        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <div>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </div>
+      </section>
+    </form>
+
+    <article>
       <div>
-        <img src="/images/profile-hex.png" alt="user avatar">
+        <div>
+          <img src="/images/profile-hex.png" alt="user avatar">
+          <p>char char</p>
+        </div>
+        <p>@charcharmasonjar<p>
       </div>
-      <div>
-        <h2>char char</h2>
-      </div>
-    </header>
+      <section>
+        <p>here's a tweet what more do you want</p>
+      </section>
+      <footer>
+        <p>10 days ago</p>
+      </footer>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <!-- <h2>Compose Tweet</h2> -->
-      <form action="/tweets/" method="POST">
-            <section class="new-tweet">
-              <textarea name="text" placeholder="What are you humming about?"></textarea>
-              <div>
-                <input type="submit" value="Tweet">
-                <span class="counter">140</span>
-              </div>
-            </section>
-            </form>
-    </main>
+    </article>
 
-  </body>
+  </main>
+
+</body>
+
 </html>
