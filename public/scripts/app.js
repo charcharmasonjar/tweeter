@@ -3,34 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// Test / driver code (temporary). Eventually will get this from the server.
 
-// Fake data taken from initial-tweets.json
-const fakeData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
 
 // function that takes in a tweet object and returning a tweet
 // <article> element containing the entire HTML structure of the tweet
@@ -69,13 +42,23 @@ const renderTweets = function (tweets) {
     let result = createTweetElement(tweet);
     $('#tweets-container').prepend(result);
   }
-}
+};
+
+//makes a request to /tweets
+//receives the array of tweets as JSON
+const loadTweets = function() {
+  $.ajax({
+    url: "/tweets",
+    type: "GET",
+  })
+  .then((res) => {
+    renderTweets(res);
+  })
+};
 
 $(document).ready(function () {
-  renderTweets(fakeData);
-})
 
-$(document).ready(function () {
+  loadTweets();
 
   $(".new-tweet").submit(function (event) {
     event.preventDefault();
@@ -86,8 +69,8 @@ $(document).ready(function () {
       type: "POST",
       data: tweet,
     })
-      .then(function () {
-        console.log("in the promise thingy");
+      .then((res) => {
+        loadTweets(res.body);
       })
   })
 });
