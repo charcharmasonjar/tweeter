@@ -1,15 +1,25 @@
 nav {
-  height: 120px;
-  background: #4056A1;
-  color: #FFFFFF;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  display: flex;
+  justify-content: space-between;
   z-index: 9999;
+  height: 120px;
+  background: #4056A1;
+  color: #FFFFFF;
   padding: 1.5em;
 }
 
-nav span {
+nav > span {
+  display: inline-flex;
+  align-items: center;
   font-family: 'Bungee', cursive;
+}
+
+nav > button {
+  background: none;
+  border: none;
+  color: #FFFFFF;
 }
