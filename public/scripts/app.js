@@ -55,7 +55,8 @@ const createTweetElement = function (tweet) {
       <i class="fa fa-retweet"></i>
       <i class="fa fa-heart"></i>
     </div>
-  </footer>`
+  </footer>
+  </article>`
 
   return $result;
 }
@@ -66,7 +67,7 @@ const createTweetElement = function (tweet) {
 const renderTweets = function (tweets) {
   for (const tweet of tweets) {
     let result = createTweetElement(tweet);
-    $('#tweets-container').append(result);
+    $('#tweets-container').prepend(result);
   }
 }
 
