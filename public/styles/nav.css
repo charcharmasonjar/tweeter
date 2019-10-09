@@ -6,7 +6,7 @@ nav {
   display: flex;
   justify-content: space-between;
   z-index: 9999;
-  height: 120px;
+  height: 100px;
   background: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;
@@ -16,6 +16,7 @@ nav > span {
   display: inline-flex;
   align-items: center;
   font-family: 'Bungee', cursive;
+  font-size: 1.5em;
 }
 
 nav > button {
