@@ -2,7 +2,7 @@
   box-sizing: border-box
 }
 
-header.head {
+body > header {
   display: flex;
   flex-direction: column;
   justify-content: center;
