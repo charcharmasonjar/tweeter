@@ -6,7 +6,7 @@
 // Test / driver code (temporary). Eventually will get this from the server.
 
 // Fake data taken from initial-tweets.json
-const data = [
+const fakeData = [
   {
     "user": {
       "name": "Newton",
@@ -72,8 +72,22 @@ const renderTweets = function (tweets) {
 }
 
 $(document).ready(function () {
-  $("body").click(() => {
-    renderTweets(data);
-  })
+  renderTweets(fakeData);
 })
 
+$(document).ready(function () {
+
+  $(".new-tweet").submit(function (event) {
+    event.preventDefault();
+    let tweet = $(this).serialize();
+
+    $.ajax({
+      url: "/tweets",
+      type: "POST",
+      data: tweet,
+    })
+      .then(function () {
+        console.log("in the promise thingy");
+      })
+  })
+});
