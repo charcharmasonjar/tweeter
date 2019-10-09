@@ -5,6 +5,10 @@ form {
   margin: 30px 0 30px 0;
 }
 
+.form-container {
+  display: none;
+}
+
 textarea {
   height: 70%;
   line-height: 70%;

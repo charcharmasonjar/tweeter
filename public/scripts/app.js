@@ -98,4 +98,11 @@ $(document).ready(function () {
         $("textarea[name='text']").val('');
       })
   })
+
+  $(".nav-button").click(() => {
+    $(".form-container").slideDown();
+  })
+
 });
+
+
