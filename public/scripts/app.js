@@ -62,6 +62,14 @@ $(document).ready(function () {
 
   $(".new-tweet").submit(function (event) {
     event.preventDefault();
+
+    if (!$("textarea[name='text']").val().length) {
+      return alert("You can't tweet an empty tweet!")
+    }
+    if ($("textarea[name='text']").val().length > 140) {
+      return alert("Tweet content is too long");
+    }
+
     let tweet = $(this).serialize();
 
     $.ajax({
