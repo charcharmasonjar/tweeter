@@ -4,6 +4,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+//function that prevents untrusted text from being evaluated
+const escape = function(string) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(string));
+  return div.innerHTML;
+};
 
 // function that takes in a tweet object and returning a tweet
 // <article> element containing the entire HTML structure of the tweet
@@ -12,12 +18,12 @@ const createTweetElement = function (tweet) {
   <header>
     <div class="user">
       <img src="${tweet.user.avatars}" alt="user avatar">
-      <p>${tweet.user.name}</p>
+      <p>${escape(tweet.user.name)}</p>
     </div>
-    <span class="handle">${tweet.user.handle}</span>
+    <span class="handle">${escape(tweet.user.handle)}</span>
   </header>
   <section>
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
   </section>
   <footer>
     <span class="date">
