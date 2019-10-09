@@ -46,14 +46,24 @@ const renderTweets = function (tweets) {
 
 //makes a request to /tweets
 //receives the array of tweets as JSON
-const loadTweets = function() {
+const loadTweets = function () {
   $.ajax({
     url: "/tweets",
     type: "GET",
   })
-  .then((res) => {
-    renderTweets(res);
+    .then((res) => {
+      renderTweets(res);
+    })
+};
+
+const loadLastTweet = function () {
+  $.ajax({
+    url: "/tweets",
+    type: "GET",
   })
+    .then((res) => {
+      renderTweets([res[res.length - 1]]);
+    })
 };
 
 $(document).ready(function () {
@@ -74,11 +84,12 @@ $(document).ready(function () {
 
     $.ajax({
       url: "/tweets",
-      type: "POST",
+      type: "POST", 
       data: tweet,
     })
-      .then((res) => {
-        loadTweets(res.body);
+      .then(() => {
+        loadLastTweet();
+        $("textarea[name='text']").val('');
       })
   })
 });
