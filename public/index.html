@@ -26,8 +26,8 @@
   <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
     rel="stylesheet">
 
-<!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -48,31 +48,29 @@
   </header>
 
   <!-- Page-specific (main) content here -->
-  <main class="container">
-    <form action="/tweets/" method="POST">
-      <section class="new-tweet">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
-        <div>
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </div>
-      </section>
+  <main>
+    <form action="/tweets/" method="POST" class="new-tweet">
+      <textarea name="text" placeholder="What are you humming about?"></textarea>
+      <div>
+        <input type="submit" value="Tweet">
+        <span class="counter">140</span>
+      </div>
     </form>
 
-    <article class="tweets">
-      <header class="tweets">
-          <div class="user">
-            <img src="/images/profile-hex.png" alt="user avatar">
-            <p>char char</p>
-          </div>
-          <span class="handle">@charcharmasonjar</span>
+    <article>
+      <header>
+        <div class="user">
+          <img src="/images/profile-hex.png" alt="user avatar">
+          <p>char char</p>
+        </div>
+        <span class="handle">@charcharmasonjar</span>
       </header>
       <section>
         <p>here's a tweet what more do you want</p>
       </section>
       <footer>
         <span class="date">
-            10 days ago
+          10 days ago
         </span>
         <div class="icons">
           <i class="fa fa-flag"></i>

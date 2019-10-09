@@ -1,5 +1,4 @@
-
-.new-tweet {
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,7 +19,7 @@ input[type=submit] {
   font-family: 'Bungee', cursive;
 }
 
-.new-tweet > div {
+form > div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

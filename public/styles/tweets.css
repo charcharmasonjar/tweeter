@@ -9,7 +9,7 @@ article {
   border: 3px solid #555149;
 }
 
-article.tweets header {
+article > header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,7 +35,7 @@ article > section {
   width: 95%;
 }
 
-article.tweets footer {
+article > footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
