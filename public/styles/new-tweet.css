@@ -48,6 +48,7 @@ form > div {
   padding: 10px;
   font-size: 0.8em;
   margin-top: 20px;
+  display: none;
 }
 
 .fa-exclamation-triangle {

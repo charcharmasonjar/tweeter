@@ -80,10 +80,10 @@ $(document).ready(function () {
     event.preventDefault();
 
     if (!$("textarea[name='text']").val().length) {
-      return alert("You can't tweet an empty tweet!")
+      $(".empty").slideDown();
     }
     if ($("textarea[name='text']").val().length > 140) {
-      return alert("Tweet content is too long");
+      $(".too-long").slideDown();
     }
 
     let tweet = $(this).serialize();
