@@ -29,11 +29,13 @@ nav > div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 
 .bounce {
   animation: bounce 3s infinite;
+  color: orange;
 }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
