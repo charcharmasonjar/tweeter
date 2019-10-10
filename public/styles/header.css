@@ -7,7 +7,7 @@ body > header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 350px;
   width: 100%;
   background-color: rgb(214, 154, 57);
   background-image: url(../images/asfalt-light.png);
