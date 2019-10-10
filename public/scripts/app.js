@@ -4,6 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const moment = require('moment');
+moment().format();
+
 //function that prevents untrusted text from being evaluated
 const escape = function(string) {
   let div = document.createElement('div');
@@ -27,7 +30,7 @@ const createTweetElement = function (tweet) {
   </section>
   <footer>
     <span class="date">
-    ${tweet.created_at}
+    ${new Date(tweet.created_at)}
     </span>
     <div class="icons">
       <i class="fa fa-flag"></i>
