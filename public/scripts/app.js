@@ -106,6 +106,7 @@ $(document).ready(function () {
   $(".nav-button").click(() => {
     $(".form-container").slideToggle("fast", () => {
       $("textarea[name='text']").focus();
+      $("button > span").toggle();
     });
   })
 
