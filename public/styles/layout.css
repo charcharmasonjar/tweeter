@@ -35,14 +35,13 @@ main {
   flex-flow: row wrap;
   justify-content: space-around;
   background-color: #f4f1ec;
-  margin: 40px 20px 20px 20px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
-  max-width: 60vw;
+  width: 100%;
+  padding: 30px 10px 10px 10px;
 }
 
 /* makes sure images resizes to fill container without squishing it */
@@ -51,8 +50,21 @@ img {
   max-height: 100%
 }
 
-@media (max-width: 1024px) {
-  main {
+@media (min-width: 768px) {
+  .container {
+    max-width: 80vw;
+  }
+}
 
+
+@media (min-width: 1024px) {
+
+  main > header {
+    min-width: 300px;
+    max-width: 30vw;
+    margin: 30px;
+  }
+  .container {
+    max-width: 60vw;
   }
 }
