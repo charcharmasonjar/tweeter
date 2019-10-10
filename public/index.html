@@ -39,7 +39,7 @@
     <div>
       <button type="button" class="nav-button"><b>Write</b> a new tweet
       </button>
-      <i class="fa fa-angle-double-down bounce"></i>
+      <i class="bounce fa fa-angle-double-down fa-lg"></i>
     </div>
 
   </nav>
@@ -56,6 +56,16 @@
   <!-- Page-specific (main) content here -->
   <main>
     <div class="form-container">
+      <div class="error empty">
+        <i class="fa fa-exclamation-triangle"></i>
+        Error: you can't tweet an empty tweet my dude
+        <i class="fa fa-exclamation-triangle"></i>
+      </div>
+      <div class="error too-long">
+        <i class="fa fa-exclamation-triangle"></i>
+        Error: tweet must be less than 140 characters
+        <i class="fa fa-exclamation-triangle"></i>
+      </div>
       <form action="/tweets/" method="POST" class="new-tweet">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <div>
