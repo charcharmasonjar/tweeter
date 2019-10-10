@@ -99,6 +99,7 @@ $(document).ready(function () {
       .then(() => {
         loadLastTweet();
         $("textarea[name='text']").val('');
+        $(".counter").text(140);
       })
   })
 
