@@ -100,7 +100,9 @@ $(document).ready(function () {
   })
 
   $(".nav-button").click(() => {
-    $(".form-container").slideDown();
+    $(".form-container").slideToggle(() => {
+      $("textarea[name='text']").focus();
+    });
   })
 
 });
