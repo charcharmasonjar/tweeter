@@ -103,15 +103,25 @@ $(document).ready(function () {
   })
 
   $(".nav-button").click(() => {
-    $(".form-container").slideToggle(() => {
+    $(".form-container").slideToggle("fast", () => {
       $("textarea[name='text']").focus();
     });
   })
 
   $(".nav-button").click(() => {
-    $("html, body").animate({ scrollTop:0 }, "slow");
+    $("html, body").animate({ scrollTop:0 }, "fast");
     return false;
   })
+
+  $(window).scroll(() => {
+    if ($(document).scrollTop() > 400) {
+      $(".bounce").addClass("fa-angle-double-up");
+      $(".bounce").removeClass("fa-angle-double-down");
+    } else {
+      $(".bounce").addClass("fa-angle-double-down");
+      $(".bounce").removeClass("fa-angle-double-up");
+    }
+  });
 
 });
 
