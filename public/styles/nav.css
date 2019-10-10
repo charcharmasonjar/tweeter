@@ -10,6 +10,7 @@ nav {
   background: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;
+  text-shadow: 2px 2px 3px rgb(74, 74, 74);
 }
 
 nav > span {
@@ -20,9 +21,13 @@ nav > span {
 }
 
 nav button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: none;
   border: none;
   color: #FFFFFF;
+  text-shadow: 2px 2px 3px rgb(74, 74, 74);
 }
 
 nav > div {
@@ -36,6 +41,7 @@ nav > div {
 .bounce {
   animation: bounce 3s infinite;
   color: orange;
+  text-shadow: 5px 5px 5px #4056A1;
 }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
