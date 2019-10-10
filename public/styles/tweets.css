@@ -27,10 +27,6 @@ article > header {
   height: 100%;
 }
 
-.handle {
-  opacity: 0;
-}
-
 article > section {
   width: 100%;
   padding: 10px;
@@ -57,12 +53,13 @@ footer > div {
   flex-direction: row;
   justify-content: space-between;
   width: 60px;
+  opacity: 0;
 }
 
 article:hover {
   box-shadow: 5px 5px 5px #4056A1;
 }
 
-article:hover .handle {
-  opacity: 0.5;
+article:hover footer > div {
+  opacity: 0.8;
 }
