@@ -31,15 +31,28 @@ body {
 }
 
 main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
   background-color: #f4f1ec;
-  margin: auto;
-  width: 90%;
+  margin: 40px 20px 20px 20px;
+}
+
+.container {
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
+  max-width: 60vw;
 }
 
 /* makes sure images resizes to fill container without squishing it */
 img {
   max-width: 100%;
   max-height: 100%
+}
+
+@media (max-width: 1024px) {
+  main {
+
+  }
 }
