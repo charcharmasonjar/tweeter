@@ -26,8 +26,6 @@ body {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  /* padding set the same as the height of navbar */
-  padding-top: 100px;
 }
 
 main {
@@ -51,8 +49,16 @@ img {
 }
 
 @media (min-width: 768px) {
+
+  body {
+    padding-top: 100px;
+  }
   .container {
     max-width: 80vw;
+  }
+
+  nav {
+    background: #4056A1;
   }
 }
 
