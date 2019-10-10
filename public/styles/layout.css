@@ -34,7 +34,8 @@ main {
   background-color: #f4f1ec;
   margin: auto;
   width: 90%;
-
+  display: flex;
+  flex-direction: column;
 }
 
 /* makes sure images resizes to fill container without squishing it */
