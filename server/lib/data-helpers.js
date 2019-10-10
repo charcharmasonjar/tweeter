@@ -3,9 +3,6 @@
 // Simulates the kind of delay we see with network or filesystem operations
 const simulateDelay = require("./util/simulate-delay");
 
-//for dealing with dates
-const moment = require('moment');
-
 // Defines helper functions for saving and getting tweets, using the database `db`
 module.exports = function makeDataHelpers(db) {
   return {
@@ -24,10 +21,6 @@ module.exports = function makeDataHelpers(db) {
         const sortNewestFirst = (a, b) => {
           a.created_at - b.created_at;
         }
-        // const sorted = db.tweets.sort(sortNewestFirst);
-        // for (const tweet of sorted) {
-        //   tweet.created_at = moment(tweet.created_at).fromNow();
-        // }
         callback(null, db.tweets.sort(sortNewestFirst));
       });
     }
