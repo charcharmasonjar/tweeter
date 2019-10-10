@@ -19,6 +19,8 @@
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
   <!-- App JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"
+    integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs="" crossorigin="anonymous"></script>
   <script type="text/javascript" src="/scripts/app.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
@@ -44,39 +46,44 @@
 
   </nav>
 
-  <header>
-    <div>
-      <img src="/images/profile-hex.png" alt="user avatar">
-    </div>
-    <div>
-      <h2>char char</h2>
-    </div>
-  </header>
-
-  <!-- Page-specific (main) content here -->
   <main>
-    <div class="form-container">
-      <div class="error empty">
-        <i class="fa fa-exclamation-triangle"></i>
-        Error: you can't tweet an empty tweet my dude
-        <i class="fa fa-exclamation-triangle"></i>
+
+    <header>
+      <div>
+        <img src="/images/profile-hex.png" alt="user avatar">
       </div>
-      <div class="error too-long">
-        <i class="fa fa-exclamation-triangle"></i>
-        Error: tweet must be less than 140 characters
-        <i class="fa fa-exclamation-triangle"></i>
+      <div>
+        <h2>char char</h2>
       </div>
-      <form action="/tweets/" method="POST" class="new-tweet">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
-        <div>
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
+    </header>
+
+    <!-- Page-specific (main) content here -->
+    <div class="container">
+      <div class="form-container">
+        <div class="error empty">
+          <i class="fa fa-exclamation-triangle"></i>
+          Error: you can't tweet an empty tweet my dude
+          <i class="fa fa-exclamation-triangle"></i>
         </div>
-      </form>
+        <div class="error too-long">
+          <i class="fa fa-exclamation-triangle"></i>
+          Error: tweet must be less than 140 characters
+          <i class="fa fa-exclamation-triangle"></i>
+        </div>
+        <form action="/tweets/" method="POST" class="new-tweet">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <div>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </div>
+        </form>
+      </div>
+
+      <div id="tweets-container">
+      </div>
+
     </div>
 
-    <div id="tweets-container">
-    </div>
   </main>
 
 </body>

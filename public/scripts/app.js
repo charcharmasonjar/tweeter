@@ -27,7 +27,7 @@ const createTweetElement = function (tweet) {
   </section>
   <footer>
     <span class="date">
-    ${new Date(tweet.created_at)};
+    ${moment(tweet.created_at).fromNow()}
     </span>
     <div class="icons">
       <i class="fa fa-flag"></i>
