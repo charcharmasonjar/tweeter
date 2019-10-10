@@ -79,11 +79,14 @@ $(document).ready(function () {
   $(".new-tweet").submit(function (event) {
     event.preventDefault();
 
+    $(".empty").slideUp();
+    $(".too-long").slideUp();
+
     if (!$("textarea[name='text']").val().length) {
-      $(".empty").slideDown();
+      return $(".empty").slideDown();
     }
     if ($("textarea[name='text']").val().length > 140) {
-      $(".too-long").slideDown();
+      return $(".too-long").slideDown();
     }
 
     let tweet = $(this).serialize();
