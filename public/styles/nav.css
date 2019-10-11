@@ -3,12 +3,12 @@ nav {
   top: 0;
   right: 0;
   left: 0;
+  z-index: 9999;
   display: flex;
   justify-content: space-between;
-  z-index: 9999;
   height: 100px;
-  color: #FFFFFF;
   padding: 1.5em;
+  color: #FFFFFF;
   text-shadow: 2px 2px 3px rgb(74, 74, 74);
 }
 
@@ -24,8 +24,8 @@ nav button {
   flex-direction: column;
   align-items: center;
   background: none;
-  border: none;
   color: #FFFFFF;
+  border: none;
   text-shadow: 2px 2px 3px rgb(74, 74, 74);
 }
 
@@ -33,7 +33,6 @@ nav > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 

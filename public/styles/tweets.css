@@ -4,10 +4,10 @@ article {
   justify-content: space-between;
   align-items: center;
   min-height: 200px;
-  margin-bottom: 20px;
   width: 100%;
-  border: 3px solid #555149;
+  margin-bottom: 20px;
   padding: 10px;
+  border: 3px solid #555149;
 }
 
 article > header {
@@ -17,7 +17,13 @@ article > header {
   align-items: center;
   height: 30%;
   width: 100%;
+  padding-right: 10px;
   font-size: 0.9em;
+}
+
+article > section {
+  width: 100%;
+  padding: 10px;
 }
 
 .user {
@@ -25,11 +31,6 @@ article > header {
   flex-direction: row;
   align-items: center;
   height: 100%;
-}
-
-article > section {
-  width: 100%;
-  padding: 10px;
 }
 
 article p {
