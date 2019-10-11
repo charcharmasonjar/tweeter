@@ -41,6 +41,7 @@ nav > div {
   color: orange;
   text-shadow: 5px 5px 5px #4056A1;
 }
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
