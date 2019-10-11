@@ -16,4 +16,8 @@ This repository is the starter code for the project: Students will fork and clon
 - Express
 - Node 5.10.x or above
 
-![](https://github.com/charcharmasonjar/tweeter/blob/master/public/images/tweet.gif)
+![gif of tweet posting](https://github.com/charcharmasonjar/tweeter/blob/master/public/images/tweet.gif)
+
+![screenshot of narrow screen](https://github.com/charcharmasonjar/tweeter/blob/master/public/images/skinny.png)
+
+![screenshot of meedium screen](https://github.com/charcharmasonjar/tweeter/blob/master/public/images/tablet.png)
