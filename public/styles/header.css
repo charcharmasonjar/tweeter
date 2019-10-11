@@ -10,6 +10,11 @@ main > header {
   background-image: url(../images/asfalt-light.png);
   color: #FFFFFF;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgb(74, 74, 74);
+}
+
+.header-img {
+  filter: drop-shadow(3px 3px 3px #222);
 }
 
 h2 {
