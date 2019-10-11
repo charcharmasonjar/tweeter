@@ -10,21 +10,15 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+img {
+  max-width: 100%;
+  max-height: 100%
+}
 
 body {
   color: #545149;
   background-color: #F3F0EA;
   font-size: 24px;
-}
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
-body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -42,17 +36,13 @@ main {
   padding: 30px 10px 10px 10px;
 }
 
-/* makes sure images resizes to fill container without squishing it */
-img {
-  max-width: 100%;
-  max-height: 100%
-}
-
 @media (min-width: 768px) {
 
   body {
+    /* padding the same size as nav bar */
     padding-top: 100px;
   }
+
   .container {
     max-width: 80vw;
   }
@@ -60,6 +50,7 @@ img {
   nav {
     background: #4056A1;
   }
+
 }
 
 
@@ -70,7 +61,9 @@ img {
     max-width: 30vw;
     margin: 30px;
   }
+
   .container {
     max-width: 60vw;
   }
+
 }
