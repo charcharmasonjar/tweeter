@@ -1,17 +1,16 @@
 /*
- * Client-side JS logic goes here
+ * Client-side JS logic
  * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
 //function that prevents untrusted text from being evaluated
-const escape = function(string) {
+const escape = function (string) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(string));
   return div.innerHTML;
 };
 
-// function that takes in a tweet object and returning a tweet
+// function that takes in a tweet object and returns a tweet
 // <article> element containing the entire HTML structure of the tweet
 const createTweetElement = function (tweet) {
   const $result = `<article>
@@ -62,6 +61,7 @@ const loadTweets = function () {
     })
 };
 
+//same as loadTweets, except only adds the last tweet to the page
 const loadLastTweet = function () {
   $.ajax({
     url: "/tweets",
@@ -82,6 +82,7 @@ $(document).ready(function () {
     $(".empty").slideUp();
     $(".too-long").slideUp();
 
+    //error handling
     if (!$("textarea[name='text']").val().length) {
       return $(".empty").slideDown();
     }
@@ -93,7 +94,7 @@ $(document).ready(function () {
 
     $.ajax({
       url: "/tweets",
-      type: "POST", 
+      type: "POST",
       data: tweet,
     })
       .then(() => {
@@ -103,18 +104,20 @@ $(document).ready(function () {
       })
   })
 
+  //toggles write tweet form and moves focus to form
   $(".nav-button").click(() => {
     $(".form-container").slideToggle("fast", () => {
       $("textarea[name='text']").focus();
-      $("button > span").toggle();
     });
   })
 
+  //write tweet button takes user backto top
   $(".nav-button").click(() => {
-    $("html, body").animate({ scrollTop:0 }, "fast");
+    $("html, body").animate({ scrollTop: 0 }, "fast");
     return false;
   })
 
+  //arrow in nav switches direction once user scrolls down 
   $(window).scroll(() => {
     if ($(document).scrollTop() > 400) {
       $(".bounce").addClass("fa-angle-double-up");
